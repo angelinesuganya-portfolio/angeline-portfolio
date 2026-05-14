@@ -21,8 +21,53 @@
    * colors
    */
 
-  /* gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient( ***
+    to bottom right, 
+    hsl(88, 100%, 32%) 0%, 
+    hsla(88, 100%, 18%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg, 
+    hsla(88, 100%, 32%, 0.251) 0%, 
+    hsla(88, 100%, 18%, 0) 59.86%
+  ), hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(88, 100%, 32%), 
+    hsl(88, 100%, 18%)
+  );
 
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(88, 100%, 32%);
+  --vegas-gold: hsl(88, 40%, 16%);
+  --light-gray: hsl(0, 0%, 84%); 
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(22, 50%, 42%);
+  --easy-purple: hsl(267, 50%, 28%);
+  --easy-cyan: hsl(216, 50%, 32%);
+
+	/* old
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
@@ -54,8 +99,6 @@
     hsl(35, 100%, 68%)
   );
 
-  /* solid */
-
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
@@ -67,7 +110,7 @@
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(0, 43%, 51%); */
 
   /**
    * typography
@@ -283,6 +326,17 @@ article.active {
   z-index: 1;
 }
 
+.content-card-nopointer {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: default;
+  z-index: 1;
+}
+
 .content-card::before {
   content: "";
   position: absolute;
@@ -316,12 +370,13 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
+  max-height: 145px;
+  overflow: visible;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 455px; }
+
 
 .sidebar-info {
   position: relative;
@@ -333,8 +388,16 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 24px;
+  padding: 2px;
+  flex-shrink: 0;
 }
+
+.avatar-box img {
+  width: 112px;
+  height: auto;
+  border-radius: 20px;
+} 
 
 .info-content .name {
   color: var(--white-2);
@@ -352,6 +415,13 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  text-align: center;
+}
+
+.center-text {
+  display: block;  /* Makes @ Notre Dame a block element so it can be centered */
+  font-size: var(--fs-8); /* Adjust the font size for the @ Notre Dame text */
+  margin-top: 3px; /* Optional: Adjust the space between "Economics PhD Student" and "@ Notre Dame" */
 }
 
 .info_more-btn {
@@ -434,7 +504,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  padding-bottom: 4px;
+  padding-bottom: 12px;
   padding-left: 7px;
 }
 
@@ -443,8 +513,19 @@ main {
   font-size: 18px;
 }
 
-
 .social-item .social-link:hover { color: var(--light-gray); }
+
+.social-icon {
+  width: 25px;  /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;  /* Makes it look like a clickable button */
+  transition: var(--transition-1);  /* Adds a smooth hover effect */
+  padding-bottom: 12px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);  /* Slightly enlarge the image on hover */
+}
 
 
 
@@ -505,6 +586,25 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+
+.about-click {
+  position: relative;
+  display: inline-block;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+}
+
+.about-click:hover,
+.about-click:focus {
+  color: var(--text-gradient-yellow);
+  border-color: hsl(88, 100%, 32%);
+}
 
 
 
@@ -579,6 +679,7 @@ main {
 }
 
 .testimonials-item {
+  position: relative;
   min-width: 100%;
   scroll-snap-align: center;
 }
@@ -589,14 +690,25 @@ main {
   left: 0;
   transform: translate(15px, -25px);
   background: var(--bg-gradient-onyx);
-  border-radius: 14px;
+  border-radius: 24px;
   box-shadow: var(--shadow-1);
+  padding: 10px;
 }
 
-.testimonials-item-title { margin-bottom: 7px; }
+.testimonials-item-title {
+  margin-bottom: 7px; 
+  padding-left: 15px;
+}
+
+@media (min-width: 600px) {
+  .testimonials-item-title {
+    padding-left: 45px; /* or 45px if that better matches avatar spacing */
+  }
+}
 
 .testimonials-text {
   color: var(--light-gray);
+  padding-left: 15px;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -604,7 +716,7 @@ main {
   line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -612,6 +724,7 @@ main {
  * #testimonials-modal
  */
 
+/** 
 .modal-container {
   position: fixed;
   top: 0;
@@ -721,11 +834,14 @@ main {
   line-height: 1.6;
 }
 
+*/
+
 
 /**
  * #clients 
  */
 
+/**
 .clients { margin-bottom: 15px; }
 
 .clients-list {
@@ -756,6 +872,61 @@ main {
 
 .clients-item img:hover { filter: grayscale(0); }
 
+*/
+
+.clients { margin-bottom: 30px; }
+
+.clients-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+}
+
+.clients-item {
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 16px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.clients-item.horizontal {
+  width: 350px;
+  height: 225px; /* 16:10 or 3:2 aspect */
+}
+
+.clients-item.vertical {
+  width: 225px;
+  height: 350px; /* Portrait orientation */
+}
+
+.clients-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+/* Caption style similar to testimonials */
+.clients-caption {
+  margin-top: 10px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
 
 
 
@@ -765,6 +936,123 @@ main {
 \*-----------------------------------*/
 
 .article-title { margin-bottom: 30px; }
+
+
+
+.research-title { margin-bottom: 25px; }
+
+.research-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+}
+
+.paper-title-toggle {
+  width: 100%;
+  color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 0;
+  margin-bottom: 0.5em;
+  transition: transform var(--transition-1), color var(--transition-1);
+}
+
+.paper-title-toggle:hover,
+.paper-title-toggle:focus {
+  color: var(--orange-yellow-crayola);
+  transform: scale(1.015);
+}
+
+.paper-title-toggle ion-icon {
+  min-width: 18px;
+  color: var(--orange-yellow-crayola);
+  transition: transform var(--transition-1);
+}
+
+.paper-title-toggle.active ion-icon {
+  transform: rotate(180deg);
+}
+
+.paper-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height var(--transition-2), opacity var(--transition-1);
+}
+
+.paper-details.active {
+  max-height: 900px;
+  opacity: 1;
+}
+
+.paper-details blockquote {
+  margin-top: 0.25em;
+}
+
+.paper-list {
+  list-style-type: none; /* remove bullets */
+  padding-left: 0;
+  margin-top: 0.5em;
+  margin-bottom: 4em;
+}
+
+.paper-item {
+  margin-bottom: 1.5em; /* space between papers */
+}
+
+.paper-item p {
+  color: var(--light-gray);
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  margin-left: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-left: 1px solid var(--light-gray);
+}
+
+.paper-buttons {
+  margin-left: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.research-click {
+  position: relative;
+  display: inline-block;
+  background: var(--border-gradient-onyx);
+  padding: 10px 16px; /* reduced from 5px all around */
+  border-radius: 8px; /* less rounded */
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  color: var(--light-gray);
+}
+
+.research-click:hover,
+.research-click:focus {
+  color: var(--text-gradient-yellow);
+  border-color: hsl(88, 100%, 32%);
+}
+
+.research-box {
+  position: relative;
+  display: inline-block;
+  background: var(--border-gradient-onyx);
+  padding: 10px 16px; /* reduced from 20px */
+  border-radius: 8px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  border: 1px solid transparent;
+}
 
 
 /**
@@ -1855,7 +2143,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contact-info :is(.contact-link) {
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     text-overflow: ellipsis;
   }
 
@@ -1879,4 +2167,96 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* National Parks skills: two-column layout */
+
+.national-parks .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 15px;
+  margin-bottom: 32px; /* spacing below the skills box */
+}
+
+.national-parks .skills-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* mobile fallback */
+@media (max-width: 580px) {
+  .national-parks .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Text-only slider: compact testimonial-style cards */
+
+.text-slider {
+  margin-bottom: 30px;
+}
+
+.text-slider-title {
+  margin-bottom: 20px;
+}
+
+.text-slider-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.text-slider-item {
+  position: relative;
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+.text-slider-card {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: default;
+  z-index: 1;
+  width: 100%;
+}
+
+.text-slider-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.text-slider-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text-slider-text p {
+  margin-bottom: 0;
+}
+
+.national-parks p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
 }

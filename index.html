@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Anthony Vecchia</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!--
+    <link rel="shortcut icon" href="./assets/images/logo-avv.ico" type="image/x-icon">
+    -->
+
+  <link rel="icon" href="./assets/images/logo-avv.svg" sizes="any" type="image/svg+xml">
 
   <!--
     - custom css link
@@ -23,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -42,17 +47,17 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-avatar-avv.png" alt="Anthony Vecchia" width="112">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Anthony Vecchia">Anthony Vecchia</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Economics PhD Candidate<br><span class="center-text">@ Notre Dame</span></p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span>Show Contact Info</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -67,56 +72,40 @@
 
           <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <p class="contact-title">Academic Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a class="contact-link">avecchia@nd.edu</a>
             </div>
 
           </li>
 
           <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title">Personal Email</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a class="contact-link">antvec701@gmail.com</a>
             </div>
 
           </li>
 
           <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title">Primary Interests</p>
 
-              <time datetime="1982-06-23">June 23, 1982</time>
+              <a class="contact-link">Monetary Policy & Banking</a>
             </div>
 
           </li>
 
           <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title">Hometown</p>
 
-              <address>Sacramento, California, USA</address>
+              <a class="contact-link">Bismarck, ND</a>
             </div>
 
           </li>
@@ -126,22 +115,28 @@
         <div class="separator"></div>
 
         <ul class="social-list">
-
+          
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://www.linkedin.com/in/anthony-vecchia-49b4a0171/" class="social-link" target="_blank">
+              <img src="./assets/images/logo-linkedin-avv.png" class="social-icon">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://x.com/antvec701" class="social-link" target="_blank">
+              <img src="./assets/images/logo-x-avv.png" class="social-icon">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://github.com/antvec701" class="social-link" target="_blank">
+              <img src="./assets/images/logo-github-avv.png" class="social-icon">
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/antvec701/" class="social-link" target="_blank">
+              <img src="./assets/images/logo-instagram-avv.png" class="social-icon">
             </a>
           </li>
 
@@ -170,23 +165,19 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link>About/CV</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>Research</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Teaching</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link>National Parks</button>
           </li>
 
         </ul>
@@ -201,32 +192,38 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about  active" data-page="about/cv">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">About/CV</h2>
         </header>
 
         <section class="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            I am an economics PhD candidate at the University of Notre Dame specializing in macroeconomics. My primary research focus is 
+            the transmission of monetary policy through the banking sector. I maintain general interests in financial markets, fiscal policy, 
+            and Bayesian&nbsp;econometrics.
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            I was born and raised in Bismarck, ND. I studied economics and math as an undergrad at the University of 
+            St&nbsp;Thomas. I began my doctoral studies at Indiana University and transferred to Notre Dame after my third&nbsp;year. 
           </p>
+
+          <p>
+            Beyond economics, I enjoy playing piano, watching basketball and soccer, 
+            graphic design, and hiking. I have a goal of visiting all national parks in the US. You can 
+            track my progress by navigating to the "National Parks" tab&nbsp;above.
+          </p>
+
+          <a href="https://antvec701.github.io/files/cv-avv.pdf" class="about-click" target="_blank">
+            <h4 class="h4">   CV   </h4>
+          </a>
         </section>
 
 
         <!--
           - service
-        -->
 
         <section class="service">
 
@@ -303,6 +300,8 @@
 
         </section>
 
+                -->
+
 
         <!--
           - testimonials
@@ -310,92 +309,82 @@
 
         <section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <h3 class="h3 testimonials-title">Recent Work</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card-nopointer" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/icon-research-avv.png" width="40" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Research</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Gathering empirical evidence for my job market&nbsp;paper.
                   </p>
                 </div>
 
               </div>
             </li>
 
+
+            
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card-nopointer" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/icon-writing-avv.png" width="40" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Writing</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Drafting a joint paper on the frequency of data&nbsp;releases.
                   </p>
                 </div>
 
               </div>
             </li>
 
+
+
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card-nopointer" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/icon-teaching-avv.png" width="40" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Teaching</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Compiling comprehensive notes on basic monetary policy terms and&nbsp;tool.
                   </p>
                 </div>
 
               </div>
             </li>
 
+
+
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card-nopointer" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/icon-studying-avv.png" width="40" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Studying</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Reading a book on the history of fiscal and monetary policy in the&nbsp;US.
                   </p>
                 </div>
 
@@ -407,9 +396,79 @@
         </section>
 
 
+
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Education</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card-nopointer" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/logo-nd-avv.png" width="40" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>PhD Economics</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Expected 2028 | University of Notre Dame | Notre&nbsp;Dame,&nbsp;IN
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card-nopointer" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/logo-iu-avv.png" width="40" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>MA Economics</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    2024 | Indiana University | Bloomington,&nbsp;IN
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card-nopointer" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/logo-ust-avv.png" width="40" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>BSc Economics</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    2022 | University of St Thomas | St&nbsp;Paul,&nbsp;MN
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        
+
+
         <!--
           - testimonials modal
-        -->
+    
 
         <div class="modal-container" data-modal-container>
 
@@ -451,6 +510,8 @@
 
         </div>
 
+         -->
+
 
         <!--
           - clients
@@ -458,47 +519,66 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Clients</h3>
+          <h3 class="h3 clients-title">Gallery</h3>
 
-          <ul class="clients-list has-scrollbar">
+          <div class="clients-list has-scrollbar">
+    
+              <div class="clients-item vertical">
+                <img src="./assets/images/img11-2025.JPG" alt="Third-Year Presentation">
+                <p class="clients-caption">Presenting my third-year paper&nbsp;(2025)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img10-2024.JPG" alt="Manitou Incline">
+                <p class="clients-caption">Hiking the Manitou Incline&nbsp;(2024)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img9-2024.JPG" alt="Peech Gig">
+                <p class="clients-caption">My band playing a gig in Minneapolis&nbsp;(2024)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img8-2024.JPG" alt="Eclipse">
+                <p class="clients-caption">My friends and I in the path of totality for the solar eclipse&nbsp;(2024)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img7-2023.JPG" alt="IU v KU">
+                <p class="clients-caption">IU v KU basketball at Assembly Hall&nbsp;(2023)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item vertical">
+                <img src="./assets/images/img6-2022.JPG" alt="Siena">
+                <p class="clients-caption">My favorite place outside the US: Siena, Italy&nbsp;(2022)</p>
+              </div>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img5-2022.JPG" alt="UST Graduation">
+                <p class="clients-caption">My friends and I graduating at UST&nbsp;(2022)</p>
+              </div>
 
-          </ul>
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img4-2020.JPG" alt="ND Badlands">
+                <p class="clients-caption">North Dakota Badlands, one of my favorite hiking spots&nbsp;(2020)</p>
+              </div>
+
+              <div class="clients-item vertical">
+                <img src="./assets/images/img3-2011.JPG" alt="Piano Recital">
+                <p class="clients-caption">My piano recital&nbsp;(2011)</p>
+              </div>
+
+              <div class="clients-item horizontal">
+                <img src="./assets/images/img2-2007.JPG" alt="Halloween $">
+                <p class="clients-caption">My favorite Halloween costume&nbsp;(2007)</p>
+              </div>
+
+              <div class="clients-item vertical">
+                <img src="./assets/images/img1-2007.JPG" alt="Mpls Fed">
+                <p class="clients-caption">My first time at the Minneapolis Fed&nbsp;(2007)</p>
+              </div>
+
+          </div>
 
         </section>
 
@@ -512,11 +592,186 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="research">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Research</h2>
         </header>
+
+      <section class="research-text">
+
+
+        
+        <h3 class="h3 research-title">Working Papers</h3>
+
+        <ul class="paper-list">
+
+                                <!--
+                            <li class="paper-item">
+                              <p>
+                                <strong>"A Reserve-Focused Assessment of Quantitative Easing and Bank Balance Sheets" (third-year paper),&nbsp;2025.</strong>
+                              </p>
+                                <blockquote>
+                                <p>
+                                  During the financial crisis and the pandemic, the Federal Reserve created vast amounts of bank reserves to finance purchases
+                                  of long-term securities and drive down their yields. I investigate how bank balance sheets react to this reserve creation. I 
+                                  identify a reserve supply shock using agnostic identification of structural vector autoregressive (SVAR) models developed by 
+                                  Arias et al. (2019). Banks react to an unexpected influx of reserves by decreasing loans and increasing holdings of liquid
+                                  assets - mostly the reserves themselves, but also federally-backed debt securities. I find evidence that banks are actually
+                                  willing to lend and sell the loans to issuers of asset-backed securities, but they are limited by loan&nbsp;demand.
+                                </p>
+                                </blockquote>
+                                <div class="paper-buttons">
+                                  <a href="https://antvec701.github.io/files/vecchia-thirdyear-draft5.pdf" class="research-click" target="_blank">Draft</a>
+                                  <a href="https://antvec701.github.io/files/vecchia-thirdyear-nontechsumm.pdf" class="research-click" target="_blank">Non-Technical Summary</a>
+                                  <div class="research-box">Replication package available upon request</div>
+                                </div>
+                            </li>
+                                -->
+
+          <li class="paper-item paper-collapsible">
+              <button class="paper-title-toggle" data-paper-toggle aria-expanded="false">
+                <span>
+                  <strong>"Measuring Sentiment Shocks in Professional Survey Data and Their Role in Aggregate Fluctuations" 
+                    (with Rupal Kamdar and Christian Matthes),&nbsp;2026.</strong>
+                </span>
+                <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+              </button>
+            
+              <div class="paper-details" data-paper-details>            
+                <blockquote>
+                  <p>
+                    We show that professional forecasts contain common sentiment components that drive aggregate
+                    fluctuations, yet are not related to existing measures of consumer sentiment. Using Survey of 
+                    Professional Forecasters’ data, we remove variation explained by macroeconomic factors and identified
+                    structural shocks, and then extract factors from the residual forecast component. This approach 
+                    reveals a substantial factor structure: the first three factors explain roughly a third of residual forecast
+                    variation. These factors can be interpreted as shocks that, in a VAR, explain 10 to 15% of aggregate
+                    fluctuations at medium horizons in variables such as real GDP growth, PCE inflation, the 
+                    unemployment rate, and the federal funds&nbsp;rate.
+                  </p>
+                </blockquote>
+            
+                <div class="paper-buttons">
+                  <a href="https://antvec701.github.io/files/kamdar-matthes-vecchia-sentiment-draft1.pdf" class="research-click" target="_blank">Draft</a>
+                  <div class="research-box">Replication Package Available Upon&nbsp;Request</div>
+                </div>
+              </div>
+            </li>
+
+
+
+
+          <li class="paper-item paper-collapsible">
+              <button class="paper-title-toggle" data-paper-toggle aria-expanded="false">
+                <span>
+                  <strong>"A Reserve-Focused Assessment of Quantitative Easing and Bank Balance Sheets",&nbsp;2025.</strong>
+                </span>
+                <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+              </button>
+            
+              <div class="paper-details" data-paper-details>
+                  <p>
+                    <strong>Note:</strong> third-year paper
+                  </p>                
+                <blockquote>
+                  <p>
+                    During the financial crisis and the pandemic, the Federal Reserve created vast amounts of bank reserves to finance purchases
+                    of long-term securities and drive down their yields. I investigate how bank balance sheets react to this reserve creation. I 
+                    identify a reserve supply shock using agnostic identification of structural vector autoregressive (SVAR) models developed by 
+                    Arias et al. (2019). Banks react to an unexpected influx of reserves by decreasing loans and increasing holdings of liquid
+                    assets - mostly the reserves themselves, but also federally-backed debt securities. I find evidence that banks are actually
+                    willing to lend and sell the loans to issuers of asset-backed securities, but they are limited by loan&nbsp;demand.
+                  </p>
+                </blockquote>
+            
+                <div class="paper-buttons">
+                  <a href="https://antvec701.github.io/files/vecchia-thirdyear-draft5.pdf" class="research-click" target="_blank">Draft</a>
+                  <a href="https://antvec701.github.io/files/vecchia-thirdyear-nontechsumm.pdf" class="research-click" target="_blank">Non-Technical&nbsp;Summary</a>
+                  <div class="research-box">Replication Package Available Upon&nbsp;Request</div>
+                </div>
+              </div>
+            </li>
+
+
+
+
+        </ul>
+
+
+
+        <h3 class="h3 research-title">Publications</h3>
+
+        <ul class="paper-list">
+
+            <li class="paper-item paper-collapsible">
+              <button class="paper-title-toggle" data-paper-toggle aria-expanded="false">
+                <span>
+                  <strong>"Bus Ridership and the Minimum Wage: Evidence from Bus Stops Near Fast-Food Restaurants" 
+                    (with Tyler C. Schipper), <em>Applied Economics Letters</em>, 30(9):1261-6,&nbsp;2023.</strong>
+                </span>
+                <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+              </button>
+            
+              <div class="paper-details" data-paper-details> 
+                  <p>
+                    <strong>Note:</strong> pre-doctoral publication
+                  </p>      
+                <blockquote>
+                  <p>
+                    This paper examines the impact of Minneapolis' local minimum wage ordinance on bus ridership. We use a difference-in-differences (DD)
+                    strategy to compare changes in ridership at bus stops in Minneapolis near fast-food restaurants to similarly situated stops around
+                    the metro area where the minimum wage was unchanged. We find that the minimum wage increase caused bus ridership to increase by 1,828
+                    rides per day or 3.5% of post-treatment daily boardings in Minneapolis. We show that the treatment effect is highly concentrated at
+                    bus stops near fast-food restaurants. An increase in the intensive margin of labor, or weekly hours, is consistent with our results
+                    and available labor market indicators.
+                  </p>
+                </blockquote>
+            
+                <div class="paper-buttons">
+                  <a href="https://antvec701.github.io/files/schipper-vecchia-buses-ael22.pdf" class="research-click" target="_blank">Pre-Print</a>
+                  <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2022.2044991" class="research-click" target="_blank">Gated Version</a>
+                </div>
+              </div>
+            </li>
+
+        </ul>
+
+
+        
+        <h3 class="h3 research-title">Works-in-Progress</h3>
+
+        <ul class="paper-list">
+
+            <li class="paper-item">
+              <p>
+                <strong>"Bank Capital Capacity and Secondary Mortgage Sales During Quantitative&nbsp;Easing"</strong>
+              </p>
+            </li>
+
+            <li class="paper-item">
+              <p>
+                <strong>"Forecasts Made by Bank Forecasters and Implications for Monetary Policy Transmission" (with Vladimir&nbsp;Menshikov)</strong>
+              </p>
+            </li>
+
+            <li class="paper-item">
+              <p>
+                <strong>"The Tradeoff Between Monthly and Quarterly Frequencies of Data Release" (with Thomas&nbsp;Poitevin)</strong>
+              </p>
+            </li>
+
+
+        </ul>
+
+
+
+      </section>
+
+              </article>
+
+
+    <!--
 
         <section class="timeline">
 
@@ -698,17 +953,16 @@
       </article>
 
 
-
+-->
 
 
       <!--
         - #PORTFOLIO
-      -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="coding">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Coding</h2>
         </header>
 
         <section class="projects">
@@ -937,6 +1191,8 @@
 
       </article>
 
+      -->
+
 
 
 
@@ -945,187 +1201,190 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <article class="blog" data-page="teaching">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Teaching</h2>
         </header>
 
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
+                <!--
+                <section class="blog-posts">
+        
+                  <ul class="blog-posts-list">
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+        
+                          <p class="blog-text">
+                            Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+        
+                          <p class="blog-text">
+                            Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">Design digest #80</h3>
+        
+                          <p class="blog-text">
+                            Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+        
+                          <p class="blog-text">
+                            Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+        
+                          <p class="blog-text">
+                            Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                    <li class="blog-post-item">
+                      <a href="#">
+        
+                        <figure class="blog-banner-box">
+                          <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                        </figure>
+        
+                        <div class="blog-content">
+        
+                          <div class="blog-meta">
+                            <p class="blog-category">Design</p>
+        
+                            <span class="dot"></span>
+        
+                            <time datetime="2022-02-23">Fab 23, 2022</time>
+                          </div>
+        
+                          <h3 class="h3 blog-item-title">Design digest #79</h3>
+        
+                          <p class="blog-text">
+                            Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                          </p>
+        
+                        </div>
+        
+                      </a>
+                    </li>
+        
+                  </ul>
+        
+                </section>
+        
+                 -->
 
       </article>
 
@@ -1137,42 +1396,357 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+<article class="national-parks" data-page="national parks">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title">National Parks</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
+        <section class="about-text">
+          <p>
+            In 2016, I set a goal of traveling to all national parks in the United States. I have been to 30 out of 63 since then. 
+            I maintain a ranking of all parks I have visited. Parks are given a score from 1 to 10 in the following weighted&nbsp;categories:
+          </p>
+        </section>
+            
+                    <section class="skill">
+            
+                      <ul class="skills-list content-card">
+            
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Macro-Scenery</h5>
+                            <data value="30">30%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 30%;"></div>
+                          </div>
+            
+                        </li>
+            
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Micro-Scenery</h5>
+                            <data value="25">25%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 25%;"></div>
+                          </div>
+            
+                        </li>
+            
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Wildlife</h5>
+                            <data value="12.5">12.5%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 12.5%;"></div>
+                          </div>
+            
+                        </li>
+            
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Uniqueness</h5>
+                            <data value="10">10%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 10%;"></div>
+                          </div>
+            
+                        </li>
+
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Crowd</h5>
+                            <data value="7.5">7.5%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 7.5%;"></div>
+                          </div>
+            
+                        </li>
+
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Trails</h5>
+                            <data value="7.5">7.5%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 7.5%;"></div>
+                          </div>
+            
+                        </li>
+
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">Cleanliness</h5>
+                            <data value="5">5%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 5%;"></div>
+                          </div>
+            
+                        </li>
+
+                        <li class="skills-item">
+            
+                          <div class="title-wrapper">
+                            <h5 class="h5">History</h5>
+                            <data value="2.5">2.5%</data>
+                          </div>
+            
+                          <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 2.5%;"></div>
+                          </div>
+            
+                        </li>
+            
+                      </ul>
+            
+                    </section>
+
+
+        <section class="about-text">
+          <p>
+            As an economist, I divide scenery into macro- and micro-scenery! Macro-scenery is large scale 
+            viewpoints while micro-scenery encompasses rock features, trees, waterfalls, etc. Of course, rankings are subjective. 
+            However, I hope that the categories add some objectivity by allowing easy comparison of parks along specific metrics. The category 
+            system rewards well-rounded parks that feature <em>all the strengths</em> of a great national park. You can see all the ratings details and
+            personalize the rankings by downloading the worksheet below. All pictures are my&nbsp;own. 
+          </p>
+
+          <a href="./files/national-parks-worksheet.xlsx"
+             class="about-click"
+             download="national-parks-worksheet.xlsx">
+            <h4 class="h4">  Download Ratings Worksheet  </h4>
+          </a>
         </section>
 
-        <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+            <section class="text-slider">
+            
+              <h3 class="h3 text-slider-title">Parks Up Next</h3>
+            
+              <ul class="text-slider-list has-scrollbar">
+            
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Cuyahoga Valley (OH)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+            
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Isle Royale (MI)
+                      </p>
+                    </div>
+                  </div>
+                </li>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Rocky Mountain (CO)
+                      </p>
+                    </div>
+                  </div>
+                </li>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        New River Gorge (WV)
+                      </p>
+                    </div>
+                  </div>
+                </li>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Shenandoah (VA)
+                      </p>
+                    </div>
+                  </div>
+                </li>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Hot Springs (AR)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+            
+              </ul>
+            
+            </section>
 
-          </form>
 
-        </section>
+
+              <section class="text-slider">
+            
+              <h3 class="h3 text-slider-title">General Park-Visiting Advice</h3>
+
+                  <p>
+                    Feel free to email me for park-specific advice!
+                  </p>
+            
+              <ul class="text-slider-list has-scrollbar">
+            
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Get up early or stay late to beat the crowd and the&nbsp;heat.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+            
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        If there is a non-loop park road, drive all the way to the end and make stops as you work
+                        back towards the entrance to avoid&nbsp;crowds.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        The rangers love to share cool info if you're willing to hear&nbsp;it.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Check well in advance if reservations are required for major parks (e.g. Rocky Mountain, Zion, Yosemite,&nbsp;etc.)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        If you plan to visit three of more parks with an entrance fee in a year, be sure to buy the annual pass to save&nbsp;money.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="text-slider-item">
+                  <div class="text-slider-card">
+                    <div class="text-slider-text">
+                      <p>
+                        Park entrance fees are usually free on MLK Day, the first day of National Park Week, Juneteenth, the anniversary of the Great
+                        American Outdoors Act, National Public Lands Day, and Veterans&nbsp;Day.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+            
+              </ul>
+            
+            </section>
+
+
+
+
+
+                <section class="clients">
+      
+                <h3 class="h3 clients-title">Gallery</h3>
+      
+                <div class="clients-list has-scrollbar">
+          
+                    <div class="clients-item vertical">
+                      <img src="./assets/images/olympic-2025.JPG" alt="Olympic (2025)">
+                      <p class="clients-caption">Ruby Beach (Olympic,&nbsp;2025)</p>
+                    </div>
+      
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/mount-rainier-2025.JPG" alt="Mount Rainier (2025)">
+                      <p class="clients-caption">Panorama Point (Mount Rainier,&nbsp;2025)</p>
+                    </div>
+      
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/black-canyon-2024.JPG" alt="Black Canyon (2024)">
+                      <p class="clients-caption">Sunset Point (Black Canyon,&nbsp;2024)</p>
+                    </div>
+      
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/mammoth-cave-2023.JPG" alt="Mammoth Cave (2023)">
+                      <p class="clients-caption">Fat Man's Misery (Mammoth Cave,&nbsp;2023)</p>
+                    </div>
+      
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/badlands-2021.JPG" alt="Badlands (2021)">
+                      <p class="clients-caption">White River Overlook (Badlands,&nbsp;2021)</p>
+                    </div>
+      
+                    <div class="clients-item vertical">
+                      <img src="./assets/images/theodore-roosevelt-2020.jpeg" alt="Theodore Roosevelt (2020)">
+                      <p class="clients-caption">River Bend (Theodore Roosevelt,&nbsp;2020)</p>
+                    </div>
+
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/glacier-2020.jpeg" alt="Glacier (2020)">
+                      <p class="clients-caption">Logan Pass (Glacier,&nbsp;2020)</p>
+                    </div>
+      
+                    <div class="clients-item vertical">
+                      <img src="./assets/images/channel-islands-2017.jpg" alt="Channel Islands (2017)">
+                      <p class="clients-caption">Inspiration Point (Channel Islands,&nbsp;2017)</p>
+                    </div>
+      
+                    <div class="clients-item horizontal">
+                      <img src="./assets/images/yosemite-2017.jpg" alt="Yosemite (2017)">
+                      <p class="clients-caption">Glacier Point (Yosemite,&nbsp;2017)</p>
+                    </div>
+      
+                </div>
+      
+              </section>
+
 
       </article>
 
