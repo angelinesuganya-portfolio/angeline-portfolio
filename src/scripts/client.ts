@@ -114,6 +114,9 @@ const init = (): void => {
   wireTestimonials();
   wireFilter();
   wireForm();
+  const PAGES: UiState['activePage'][] = ['about', 'resume', 'portfolio', 'blog', 'contact'];
+  const hash = window.location.hash.replace('#', '') as UiState['activePage'];
+  if (PAGES.includes(hash)) uiStore.getState().setActivePage(hash);
   uiStore.subscribe(render);
   render(uiStore.getState());
 };
