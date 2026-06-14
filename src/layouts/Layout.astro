@@ -1,8 +1,22 @@
 ---
 import { site } from '../data/site';
 
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  article?: { datePublished: string; image: string } | null;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  ogImage: ogImageOverride,
+  article = null,
+} = Astro.props;
+
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const ogImage = new URL(site.ogImage.replace('./', '/'), site.url).href;
+const ogImage = new URL((ogImageOverride ?? site.ogImage).replace('./', '/'), site.url).href;
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -24,9 +38,9 @@ const personSchema = {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{site.title}</title>
+  <title>{title}</title>
 
-  <meta name="description" content={site.description} />
+  <meta name="description" content={description} />
   <meta name="keywords" content={site.keywords.join(', ')} />
   <meta name="theme-color" content={site.themeColor} />
   <link rel="canonical" href={canonical} />
@@ -39,18 +53,33 @@ const personSchema = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={site.title} />
-  <meta property="og:description" content={site.description} />
+  <meta property="og:type" content={article ? 'article' : 'website'} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={ogImage} />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={site.title} />
-  <meta name="twitter:description" content={site.description} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
 
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+  {article && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        image: new URL(article.image.replace('./', '/'), site.url).href,
+        datePublished: article.datePublished,
+        author: { '@type': 'Person', name: site.person.name },
+        mainEntityOfPage: canonical,
+      })}
+    />
+  )}
 </head>
 
 <body>
