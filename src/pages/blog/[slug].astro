@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import Navbar from '../../components/Navbar.astro';
+import { site } from '../../data/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, category, datetime, dateLabel, image, alt, excerpt } = post.data;
+---
+
+<Layout
+  title={`${title} — ${site.title}`}
+  description={excerpt}
+  ogImage={image}
+  article={{ datePublished: datetime, image }}
+>
+  <main>
+
+    <Sidebar />
+
+    <div class="main-content">
+
+      <Navbar />
+
+      <article class="blog active">
+
+        <header>
+          <a href="/#blog" class="blog-back">&#8592; Back to Blog</a>
+          <h2 class="h2 article-title">{title}</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <figure class="blog-banner-box post-banner">
+            <img src={image} alt={alt} loading="lazy" />
+          </figure>
+
+          <div class="blog-meta">
+            <p class="blog-category">{category}</p>
+            <span class="dot"></span>
+            <time datetime={datetime}>{dateLabel}</time>
+          </div>
+
+          <div class="blog-text post-body">
+            <Content />
+          </div>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <script>
+    import '../../scripts/blog-post.ts';
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" is:inline></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" is:inline></script>
+</Layout>
+
+<style>
+  .blog-back {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--orange-yellow-crayola, #ffdb70);
+    font-size: var(--fs-6, 0.875rem);
+  }
+  .blog-back:hover { text-decoration: underline; }
+  .post-banner { margin-bottom: 20px; }
+  .post-body :is(p, ul, ol, h2, h3) { margin-bottom: 15px; }
+  .post-body :is(h2, h3) { color: var(--white-2, #fafafa); }
+</style>
