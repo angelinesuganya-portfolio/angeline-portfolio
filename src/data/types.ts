@@ -83,16 +83,6 @@ export interface Project {
   alt: string;
 }
 
-export interface BlogPost {
-  image: string;
-  alt: string;
-  category: string;
-  datetime: string;
-  dateLabel: string;
-  title: string;
-  text: string;
-}
-
 export interface PersonSchema {
   name: string;
   jobTitle: string;
