@@ -1,0 +1,67 @@
+---
+import { portfolioCategories, projects } from '../../data/portfolio';
+---
+
+<article class="portfolio" data-page="portfolio">
+
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
+
+  <section class="projects">
+
+    <ul class="filter-list">
+      {portfolioCategories.map((category, index) => (
+        <li class="filter-item">
+          <button class:list={[{ active: index === 0 }]} data-filter-btn>{category}</button>
+        </li>
+      ))}
+    </ul>
+
+    <div class="filter-select-box">
+
+      <button class="filter-select" data-select>
+
+        <div class="select-value" data-selecct-value>Select category</div>
+
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+
+      </button>
+
+      <ul class="select-list">
+        {portfolioCategories.map((category) => (
+          <li class="select-item">
+            <button data-select-item>{category}</button>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+
+    <ul class="project-list">
+      {projects.map((project) => (
+        <li class="project-item  active" data-filter-item data-category={project.categorySlug}>
+          <a href="#">
+
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+
+              <img src={project.image} alt={project.alt} loading="lazy" />
+            </figure>
+
+            <h3 class="project-title">{project.title}</h3>
+
+            <p class="project-category">{project.category}</p>
+
+          </a>
+        </li>
+      ))}
+    </ul>
+
+  </section>
+
+</article>
