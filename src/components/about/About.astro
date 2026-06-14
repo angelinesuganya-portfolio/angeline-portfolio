@@ -1,0 +1,27 @@
+---
+import { aboutText } from '../../data/about';
+import Services from './Services.astro';
+import Testimonials from './Testimonials.astro';
+import Modal from './Modal.astro';
+import Clients from './Clients.astro';
+---
+
+<article class="about  active" data-page="about">
+
+  <header>
+    <h2 class="h2 article-title">About me</h2>
+  </header>
+
+  <section class="about-text">
+    {aboutText.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
+  <Services />
+
+  <Testimonials />
+
+  <Modal />
+
+  <Clients />
+
+</article>
