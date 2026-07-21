@@ -7,9 +7,3 @@ Analista de Dados
 
 Acesse o portifólio clicando aqui[<link  do portifolio>]
 
-
-## Creditos:
-
-Forked yb codewithsadee/vcard-personal-portfolio
-Repositório do Portifólio Original: [https://github.com/codewithsadee/vcard-personal-portfolio.git]
-
