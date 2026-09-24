@@ -123,6 +123,17 @@ h1 em, h2 em { color: var(--clay); font-weight: 500; }
 .methods-band .methods-tools { grid-column: 2; color: #aebbb5 !important; }
 .methods-band strong { color: var(--paper); }
 
+.technical-section { background: var(--white); }
+.technical-section .section-heading { margin-bottom: 42px; }
+.technical-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.technical-card { min-width: 0; min-height: 260px; padding: 29px clamp(20px, 3vw, 38px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.technical-index { display: block; margin-bottom: 25px; color: var(--clay-dark); font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+.technical-card h3 { margin-bottom: 11px; font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.3; }
+.technical-card > p:not(.technical-tools) { max-width: 475px; margin-bottom: 19px; color: var(--body); font-size: 12px; line-height: 1.8; }
+.technical-card .technical-tools { margin: 0; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.7; }
+.technical-tools strong { margin-right: 8px; color: var(--ink); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.technical-note { margin: 14px 0 0; color: var(--muted); font-size: 10px; }
+
 .work-section { padding-top: 114px; }
 .project-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: -8px 0 28px; }
 .filter-button { display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid var(--line); background: transparent; color: var(--body); font-size: 11px; font-weight: 600; cursor: pointer; transition: color .2s ease, background .2s ease, border .2s ease; }
@@ -163,6 +174,19 @@ h1 em, h2 em { color: var(--clay); font-weight: 500; }
 .publication-arrow.publication-label { width: auto; border: 0; color: var(--clay-dark); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
 .publication-footnote { margin: 21px 0 0; color: var(--body); font-size: 11px; }
 .publication-footnote a { color: var(--clay-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.theses-section { background: var(--paper); }
+.theses-section .section-heading { margin-bottom: 42px; }
+.thesis-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.thesis-card { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; padding: clamp(23px, 3.4vw, 38px); border: 1px solid var(--line); background: var(--white); }
+.thesis-card-featured { border-color: var(--ink); background: var(--moss-light); }
+.thesis-card .project-meta { margin-bottom: 13px; }
+.thesis-card h3 { margin-bottom: 15px; font-family: var(--serif); font-size: clamp(21px, 2.2vw, 27px); font-weight: 500; line-height: 1.38; }
+.thesis-card > p:not(.project-meta) { margin-bottom: 17px; color: var(--body); font-size: 12px; line-height: 1.85; }
+.thesis-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: auto 0 22px; padding-top: 6px; }
+.thesis-tags span { padding: 6px 9px; border: 1px solid rgb(25 53 54 / 19%); color: var(--ink-soft); font-size: 9px; font-weight: 600; }
+.thesis-download { margin-top: 0; }
+.button-outline { border: 1px solid var(--ink); color: var(--ink); }
+.button-outline:hover { background: var(--ink); color: var(--paper); }
 
 .experience-section { padding-top: 112px; }
 .experience-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(35px, 7vw, 90px); }
@@ -267,6 +291,10 @@ h1 em, h2 em { color: var(--clay); font-weight: 500; }
   .heritage-callout p:last-child { font-size: 19px; }
   .methods-band { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
   .methods-band .methods-tools { grid-column: 1; }
+  .technical-grid, .thesis-grid { grid-template-columns: 1fr; }
+  .technical-card { min-height: 0; padding: 23px 20px; }
+  .technical-index { margin-bottom: 17px; }
+  .thesis-card { padding: 25px 21px; }
   .work-section { padding-top: 76px; }
   .project-grid { gap: 35px 18px; }
   .project-card-featured { grid-template-columns: 1fr; gap: 13px; padding: 17px; }

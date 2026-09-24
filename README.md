@@ -18,6 +18,9 @@ Then open <http://localhost:8080>.
 - `assets/css/style.css` — visual system, layout and responsive styles
 - `assets/js/script.js` — mobile navigation and project filtering
 - `assets/images/` — project photography and supporting artwork
+- `assets/theses/` — downloadable PhD (2025) and MSc (2019) thesis PDFs
+
+The technical-work section summarises simulation, environmental analysis, prototyping and field-monitoring methods described in the two theses.
 
 Google Fonts are loaded when available; system font fallbacks keep the page readable if the font service is unavailable. The local project images do not depend on a remote image host.
 
